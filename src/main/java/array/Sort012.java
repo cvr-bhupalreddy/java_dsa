@@ -26,7 +26,7 @@ public class Sort012 {
             else if (arr[mid] == 1){
                 mid++;
             }
-            else if(arr[mid] == 2) {
+            else  {
                 temp = arr[mid];
                 arr[mid] = arr[high];
                 arr[high] = temp;
@@ -45,8 +45,10 @@ public class Sort012 {
 
         printArray(numbers);
 
+
         sort012(numbers);
 
+        System.out.println("");
         System.out.println("Numbers After Sorting");
 
         printArray(numbers);
@@ -54,6 +56,6 @@ public class Sort012 {
     }
 
     private static void printArray(int[] numbers) {
-        Arrays.stream(numbers).forEach(System.out::println);
+        Arrays.stream(numbers).forEach(System.out::print);
     }
 }
